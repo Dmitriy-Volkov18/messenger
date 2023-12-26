@@ -42,7 +42,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             onClose={onClose}
         >
             <div className="sm:flex sm:items-start">
-                <div className="*:x-authOptionsflex
+                <div className="flex
                 h-12
                 w-12
                 flex-shrink-0
