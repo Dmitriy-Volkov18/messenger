@@ -3,7 +3,8 @@
 import useConversation from "@/app/hooks/useConversation";
 import axios from "axios";
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
-import { HiPhoto } from "react-icons/hi2";
+//import { HiPhoto } from "react-icons/hi2";
+import { MdDriveFolderUpload } from "react-icons/md";
 import MessageInput from "./MessageInput";
 import { HiPaperAirplane } from "react-icons/hi";
 import { CldUploadButton } from "next-cloudinary";
@@ -56,7 +57,7 @@ const Form = () => {
             options={{maxFiles: 1}}
             onUpload={handleUpload}
             uploadPreset="irq7dppg">
-                <HiPhoto size={30} className="text-sky-500" />
+                <MdDriveFolderUpload size={30} />
 
             </CldUploadButton>
             <form
@@ -67,7 +68,7 @@ const Form = () => {
                     register={register}
                     errors={errors}
                     required
-                    placeholder="Write a message"
+                    placeholder="Написать сообщение"
                 />
 
                 <button

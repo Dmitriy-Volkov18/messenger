@@ -15,8 +15,10 @@ const EmptyState = () => {
                 <h3 className="mt-2
                 text-2xl
                 font-semibold
-                text-gray-900">
-                    Select a chat or start a new conversation
+                text-gray-900"
+                //Select a chat or start a new conversation
+                >
+                    Выберите чат или создайте новый
                 </h3>
             </div>
         </div>

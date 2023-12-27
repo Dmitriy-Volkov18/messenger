@@ -58,7 +58,8 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
                                 label={item.label}
                                 icon={item.icon}
                                 active={item.active}
-                                onClick={item.onClick} />
+                                //onClick={item.onClick} 
+                                />
                         ))}
                     </ul>
                 </nav>

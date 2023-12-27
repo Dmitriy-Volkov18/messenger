@@ -11,6 +11,7 @@ import Input from "../inputs/Input";
 import Image from "next/image";
 import { CldUploadButton } from "next-cloudinary";
 import Button from "../Button";
+import {signOut} from "next-auth/react";
 
 interface SettingsModalProps{
     isOpen?: boolean
@@ -77,7 +78,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                             Profile
                         </h2>
                         <p className="mt-1 text-sm leading-6 text-gray-600">
-                            Edit you public information
+                            Edit you information
                         </p>
 
                         <div className="
@@ -136,6 +137,13 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                     items-center
                     justify-end
                     gap-x-6">
+                        <Button
+                            disabled={isLoading}
+                            secondary
+                            onClick={signOut}
+                        >
+                            Logout
+                        </Button>
                         <Button
                             disabled={isLoading}
                             secondary
