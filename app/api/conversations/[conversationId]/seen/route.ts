@@ -62,7 +62,7 @@ export async function POST(
         });
 
         await pusherServer.trigger(currentUser.email, 'conversation:update', {
-            id:conversationId,
+            id: conversationId,
             messages: [updatedMessage]
         });
 
@@ -72,6 +72,7 @@ export async function POST(
 
         await pusherServer.trigger(conversationId!, 'message:update', updatedMessage);
 
+        return NextResponse.json(updatedMessage);
     }catch(error: any){
         console.log(error, 'ERROR_MESSAGES_SEEN');
         return new NextResponse("internal error", {status: 500});
